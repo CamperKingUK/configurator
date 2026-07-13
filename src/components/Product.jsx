@@ -8,9 +8,9 @@ import { useGLTF, MeshTransmissionMaterial, useTexture } from '@react-three/drei
 
 export default function Product({ customColor, materialType, ...props }) {
   
-  const { nodes, materials } = useGLTF('/product.glb')
+  const { nodes, materials } = useGLTF('/wireframes/product.glb')
 
-  const woodTexture = useTexture('/wood-diffuse.png')
+  const woodTexture = useTexture('/maps/floor/wood-diffuse.png')
 
 
   return (
@@ -49,5 +49,5 @@ export default function Product({ customColor, materialType, ...props }) {
   )
 }
 
-useGLTF.preload('/product.glb')
-useTexture.preload('/wood-diffuse.png')
+useGLTF.preload('/wireframes/product.glb')
+useTexture.preload('/maps/floor/wood-diffuse.png')

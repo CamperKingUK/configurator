@@ -5,7 +5,7 @@ import { MeshTransmissionMaterial, useTexture } from '@react-three/drei'
 export default function ConfigurableBox({ customColor, materialType, ...props }) {
 
   // Your dictionary of PBR material presets
-const woodTexture = useTexture('/wood-diffuse.png')
+const woodTexture = useTexture('/maps/floor/wood-diffuse.png')
   return (
     <mesh {...props}>
       {/* 1. Define the shape */}
@@ -40,4 +40,4 @@ const woodTexture = useTexture('/wood-diffuse.png')
     </mesh>
   )
 }
-useTexture.preload('/wood-diffuse.png')
+useTexture.preload('/maps/floor/wood-diffuse.png')

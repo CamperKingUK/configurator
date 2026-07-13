@@ -10,7 +10,7 @@ export default function T6Component({ seatColor, floorMaterialType, ...props }) 
 
   const group = React.useRef()
 
-  const { nodes, materials, animations } = useGLTF('/t6.glb')
+  const { nodes, materials, animations } = useGLTF('/wireframes/t6.glb')
 
 /////////////////////////////////////////////////////////////
   // SEAT MATERIALS
@@ -18,9 +18,9 @@ export default function T6Component({ seatColor, floorMaterialType, ...props }) 
 
   // 1. Load the Tan Leather textures
   const tanLeather = useTexture({
-    map: '/UPHOLSTREY.2_001_Base Color.jpeg',
-    normalMap: '/UPHOLSTREY.2_001_Normal.jpeg',
-    aoMap: '/UPHOLSTREY.2_001_Ambient Occlusion.jpeg'
+    map: '/maps/upholstery/UPHOLSTREY.2_001_Base Color.jpeg',
+    normalMap: '/maps/upholstery/UPHOLSTREY.2_001_Normal.jpeg',
+    aoMap: '/maps/upholstery/UPHOLSTREY.2_001_Ambient Occlusion.jpeg'
   })
 
   // Configure tan leather textures once
@@ -53,9 +53,9 @@ export default function T6Component({ seatColor, floorMaterialType, ...props }) 
 
   // 1. Load the checkboard texture
   const checkFloor = useTexture({
-    map: '/Floor_008_Base Color.jpeg',
-    normalMap: '/Floor_008_Normal.jpeg',
-    aoMap: '/Floor_008_Ambient Occlusion.jpeg'
+    map: '/maps/floor/Floor_008_Base Color.jpeg',
+    normalMap: '/maps/floor/Floor_008_Normal.jpeg',
+    aoMap: '/maps/floor/Floor_008_Ambient Occlusion.jpeg'
   })
   
   useMemo(() => {
@@ -70,9 +70,9 @@ export default function T6Component({ seatColor, floorMaterialType, ...props }) 
 
   // 1. Load the wood texture
   const oakFloor = useTexture({
-    map: '/Floor_007_Base Color.jpeg',
-    normalMap: '/Floor_007_Normal.jpeg',
-    aoMap: '/Floor_007_Ambient Occlusion.jpeg'
+    map: '/maps/floor/Floor_007_Base Color.jpeg',
+    normalMap: '/maps/floor/Floor_007_Normal.jpeg',
+    aoMap: '/maps/floor/Floor_007_Ambient Occlusion.jpeg'
   })
   
   useMemo(() => {
@@ -94,9 +94,9 @@ export default function T6Component({ seatColor, floorMaterialType, ...props }) 
 
   // 1. Load the stone texture
   const stoneFloor = useTexture({
-    map: '/Floor_005_Base Color.jpeg',
-    normalMap: '/Floor_005_Normal.jpeg',
-    aoMap: '/Floor_005_Ambient Occlusion.jpeg'
+    map: '/maps/floor/Floor_005_Base Color.jpeg',
+    normalMap: '/maps/floor/Floor_005_Normal.jpeg',
+    aoMap: '/maps/floor/Floor_005_Ambient Occlusion.jpeg'
   })
   
   useMemo(() => {
@@ -448,14 +448,14 @@ export default function T6Component({ seatColor, floorMaterialType, ...props }) 
   )
 }
 
-useGLTF.preload('/t6.glb')
+useGLTF.preload('/wireframes/t6.glb')
 // Preload the PBR maps so they don't pop in late
-useTexture.preload('/Floor_007_Base Color.jpeg')
-useTexture.preload('/Floor_007_Normal.jpeg')
-useTexture.preload('/Floor_007_Ambient Occlusion.jpeg')
-useTexture.preload('/Floor_005_Base Color.jpeg')
-useTexture.preload('/Floor_005_Normal.jpeg')
-useTexture.preload('/Floor_005_Ambient Occlusion.jpeg')
-useTexture.preload('/Floor_008_Base Color.jpeg')
-useTexture.preload('/Floor_008_Normal.jpeg')
-useTexture.preload('/Floor_008_Ambient Occlusion.jpeg')
+useTexture.preload('/maps/floor/Floor_007_Base Color.jpeg')
+useTexture.preload('/maps/floor/Floor_007_Normal.jpeg')
+useTexture.preload('/maps/floor/Floor_007_Ambient Occlusion.jpeg')
+useTexture.preload('/maps/floor/Floor_005_Base Color.jpeg')
+useTexture.preload('/maps/floor/Floor_005_Normal.jpeg')
+useTexture.preload('/maps/floor/Floor_005_Ambient Occlusion.jpeg')
+useTexture.preload('/maps/floor/Floor_008_Base Color.jpeg')
+useTexture.preload('/maps/floor/Floor_008_Normal.jpeg')
+useTexture.preload('/maps/floor/Floor_008_Ambient Occlusion.jpeg')
